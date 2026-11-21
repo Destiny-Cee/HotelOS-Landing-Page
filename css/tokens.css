@@ -1,29 +1,29 @@
 /* ============================================================
-   Hotel OS — Design Tokens (Brand Identity compliance)
-   Deep Blue 60% / White 25% / Orange 15%
+   Hotel OS — Design Tokens (Brand-aligned, site layout preserved)
+   Deep Blue / White / Orange accent
    ============================================================ */
 
 :root {
-  /* Brand colours */
-  --hotel-blue: #1a3c5e;
-  --hotel-blue-dark: #122a44;
-  --hotel-blue-deep: #0d2135;
-  --hotel-blue-light: #2a5580;
-  --hotel-blue-tint: #eef3f8;
-  --hotel-orange: #e8821a;
-  --hotel-orange-dark: #c96f12;
-  --hotel-orange-tint: #fdf3e7;
-  --hotel-white: #ffffff;
+  /* Brand colours (aligned to hotelos-brand-kit) */
+  --hotel-blue: #1A3C5E;
+  --hotel-blue-dark: #0F2338;
+  --hotel-blue-deep: #0B1726;
+  --hotel-blue-light: #2A5A8C;
+  --hotel-blue-tint: #EEF3F8;
+  --hotel-orange: #E8821A;
+  --hotel-orange-dark: #CC6F13;
+  --hotel-orange-tint: #FFF7ED;
+  --hotel-white: #FFFFFF;
 
-  /* Neutrals (subtle tints of white / deep blue only) */
-  --surface: #ffffff;
-  --surface-soft: #f7f9fb;
-  --border: #e3eaf1;
-  --border-strong: #cbd8e4;
-  --text: #16202b;
-  --text-soft: #4b5b6b;
-  --text-muted: #7d8b99;
-  --text-inverse: #ffffff;
+  /* Neutrals / surfaces */
+  --surface: #FFFFFF;
+  --surface-soft: #F8FAFC;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --text: #0F172A;
+  --text-soft: #475569;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
   --text-inverse-soft: rgba(255, 255, 255, 0.72);
 
   /* Typography */
@@ -48,7 +48,7 @@
 
   /* Radii */
   --radius-sm: 8px;
-  --radius-md: 12px;
+  --radius-md: 10px;
   --radius-lg: 16px;
 
   /* Layout */

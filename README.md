@@ -19,8 +19,13 @@ Plain **HTML + CSS + JavaScript** — no framework, no build step, no npm packag
 ├── js/
 │   └── main.js             # nav, reveal, tabs, FAQ, form validation
 ├── assets/
-│   ├── favicon.svg         # ⚠️ placeholder H symbol (official asset pending)
-│   ├── logo/               # ⬜ official logo files go here
+│   ├── favicon.svg         # official brand symbol
+│   ├── brand/
+│   │   ├── logos/          # primary-two-tone, knockout-white (in use)
+│   │   └── icons/
+│   │       ├── hotelos-symbol-app-icon.svg
+│   │       └── modules/    # 9 platform system icons (in use)
+│   ├── logo/               # reserved
 │   ├── screenshots/        # ⬜ real product screenshots go here
 │   └── images/             # ⬜ photography / OG image go here
 ├── sitemap.xml
@@ -71,10 +76,12 @@ mailto draft — it never shows a fake success.
 - [ ] Set `FALLBACK_EMAIL` (currently `hello@hotelos.example`)
 
 ### 2. Brand assets (blocking for final review)
-- [ ] **Official Hotel OS logo** (SVG: primary blue, reversed white, H symbol) → `assets/logo/`
-      Replace the placeholder lockup in the navbar/footer and `assets/favicon.svg`
+- [x] **Official Hotel OS logo** integrated (navbar: primary two-tone, footer: knockout white) → `assets/brand/logos/`
+      Navbar/footer placeholder lockups replaced with brand SVGs
+- [x] **Favicon** — replaced with official brand symbol (`assets/brand/icons/hotelos-symbol-app-icon.svg` → `assets/favicon.svg`)
+- [x] **Design tokens** — `css/tokens.css` aligned with brand-kit color/surface/radius values (site layout/type scale preserved)
+- [x] **Platform module icons** — official system icons integrated for the 9 platform cards → `assets/brand/icons/modules/`
 - [ ] **Brand Identity Presentation** (page 23 homepage concept) — for design cross-check
-- [ ] **Favicon** — official H symbol replacing placeholder
 
 ### 3. Product screenshots (strongly recommended)
 All product visuals are currently **clearly-labeled illustrative CSS previews**.

@@ -182,33 +182,20 @@ a { color: var(--hotel-blue); text-decoration: none; }
   color: var(--hotel-white);
   letter-spacing: -0.02em;
 }
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
+.brand-logo {
+  display: block;
+  height: clamp(30px, 4vw, 36px);
+  width: auto;
+}
+.navbar .brand-logo {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-sm);
-  background: var(--hotel-white);
-  color: var(--hotel-blue);
-  font-weight: 800;
-  font-size: 1.15rem;
-  position: relative;
+  padding: 4px 10px;
+  box-shadow: 0 1px 4px rgba(13, 33, 53, 0.12);
 }
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 14px;
-  height: 4px;
-  background: var(--hotel-orange);
-  border-radius: 2px;
-}
-.brand-word-accent { color: var(--hotel-orange); }
-.brand-inverse .brand-mark {
-  background: var(--hotel-white);
-  color: var(--hotel-blue);
+.brand-logo-footer {
+  height: clamp(30px, 4vw, 36px);
 }
 
 .nav-links {
@@ -548,7 +535,13 @@ a { color: var(--hotel-blue); text-decoration: none; }
   background: var(--hotel-blue-tint);
   color: var(--hotel-blue);
 }
-.icon-wrap svg { width: 24px; height: 24px; }
+.icon-wrap svg,
+.icon-wrap img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
 .icon-orange {
   background: var(--hotel-orange-tint);
   color: var(--hotel-orange-dark);

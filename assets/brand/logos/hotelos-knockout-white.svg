@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="340" height="100" fill="none">
+  <!-- HotelOS Symbol -->
+  <g transform="translate(10, 0)">
+    <rect x="8" y="16" width="16" height="68" rx="8" fill="#FFFFFF" />
+    <rect x="56" y="16" width="16" height="68" rx="8" fill="#FFFFFF" />
+    <path d="M20 42 H60 C64.4 42 68 45.6 68 50 C68 54.4 64.4 58 60 58 H20 C15.6 58 12 54.4 12 50 C12 45.6 15.6 42 20 42 Z" fill="#FFFFFF" />
+    <circle cx="40" cy="50" r="7.5" fill="#1A3C5E" />
+  </g>
+  <!-- Wordmark -->
+  <text x="105" y="65" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="44" font-weight="700" letter-spacing="-1.2" fill="#FFFFFF">
+    Hotel<tspan font-weight="800" fill="#FFFFFF">OS</tspan>
+  </text>
+</svg>
