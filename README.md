@@ -12,12 +12,12 @@ Plain **HTML + CSS + JavaScript** — no framework, no build step, no npm packag
 
 ```
 /
-├── index.html              # all 13 sections (semantic, accessible)
+├── index.html              # compact landing page (semantic, accessible)
 ├── css/
 │   ├── tokens.css          # brand design tokens (:root variables)
 │   └── style.css           # components + responsive layout
 ├── js/
-│   └── main.js             # nav, reveal, tabs, FAQ, form validation
+│   └── main.js             # nav, reveal, FAQ, form validation
 ├── assets/
 │   ├── favicon.svg         # official brand symbol
 │   ├── brand/

@@ -106,38 +106,6 @@
     reveals.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---------- Product showcase tabs ---------- */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll(".showcase-tabs .tab"));
-  var panels = Array.prototype.slice.call(document.querySelectorAll(".showcase-panel"));
-
-  function activateTab(tab) {
-    tabs.forEach(function (t) {
-      var active = t === tab;
-      t.classList.toggle("is-active", active);
-      t.setAttribute("aria-selected", String(active));
-      t.tabIndex = active ? 0 : -1;
-    });
-    panels.forEach(function (p) {
-      var match = p.id === tab.getAttribute("data-panel");
-      p.classList.toggle("is-active", match);
-      if (match) p.removeAttribute("hidden");
-      else p.setAttribute("hidden", "");
-    });
-  }
-
-  tabs.forEach(function (tab, i) {
-    tab.tabIndex = i === 0 ? 0 : -1;
-    tab.addEventListener("click", function () { activateTab(tab); });
-    tab.addEventListener("keydown", function (e) {
-      var dir = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-      if (!dir) return;
-      e.preventDefault();
-      var next = tabs[(i + dir + tabs.length) % tabs.length];
-      next.focus();
-      activateTab(next);
-    });
-  });
-
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll(".faq-q").forEach(function (btn) {
     btn.addEventListener("click", function () {
