@@ -195,12 +195,13 @@ a { color: var(--hotel-blue); text-decoration: none; }
   height: clamp(30px, 4vw, 36px);
 }
 .brand-logo-footer.brand-logo-symbol {
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  height: 44px;
+  width: 44px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 4px rgba(13, 33, 53, 0.12);
 }
 
 .nav-links {
@@ -832,6 +833,20 @@ a { color: var(--hotel-blue); text-decoration: none; }
   .nav-link { display: block; width: 100%; padding: 0.9em 0.5em; font-size: 1rem; border-radius: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
   .nav-cta-mobile { display: flex; width: 100%; margin-top: 1rem; }
 
+  .process-inline {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+  }
+  .process-inline .process-step {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+  .process-inline .process-num {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    font-size: 0.9rem;
+  }
   .process::before { display: none; }
   .principles { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
