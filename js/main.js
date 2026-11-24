@@ -200,10 +200,17 @@
       });
     });
 
+    var statusTimer;
     function setStatus(msg, kind) {
       if (!statusEl) return;
+      clearTimeout(statusTimer);
       statusEl.textContent = msg;
-      statusEl.className = "form-status" + (kind ? " is-" + kind : "");
+      statusEl.className = "toast" + (kind ? " is-" + kind : "") + (msg ? " is-visible" : "");
+      if (msg) {
+        statusTimer = setTimeout(function () {
+          statusEl.classList.remove("is-visible");
+        }, 3500);
+      }
     }
 
     function setBusy(busy) {

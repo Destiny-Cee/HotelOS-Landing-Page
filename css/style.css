@@ -722,15 +722,33 @@ a { color: var(--hotel-blue); text-decoration: none; }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-.form-status {
-  margin-top: 1rem;
-  font-size: 0.875rem;
+/* Toast popup (form feedback) */
+.toast {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 999;
+  max-width: min(92vw, 360px);
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--hotel-blue-deep);
+  color: var(--hotel-white);
+  font-size: 0.9rem;
   font-weight: 600;
-  min-height: 1.4em;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
-.form-status.is-error { color: #c0392b; }
-.form-status.is-success { color: #1d7a4c; }
-.form-status.is-info { color: var(--text-soft); }
+.toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.toast.is-success { background: #1d7a4c; }
+.toast.is-error { background: #c0392b; }
+.toast.is-info { background: var(--hotel-blue); }
 
 /* ---------- Footer ---------- */
 .footer {
