@@ -15,7 +15,7 @@
      NEVER fake a successful submission.
      ---------------------------------------------------------- */
   var FORM_ENDPOINT = ""; // TODO: configure before production
-  var FALLBACK_EMAIL = "hello@hotelos.example"; // TODO: verified contact email
+  var FALLBACK_EMAIL = "support@hotelos.com.ng";
 
   /* ---------- Sticky navbar state ---------- */
   var navbar = document.getElementById("navbar");
