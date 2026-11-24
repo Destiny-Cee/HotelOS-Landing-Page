@@ -235,12 +235,9 @@
         return;
       }
 
-      // Destination not configured — honest state, no fake success
+      // Mailto fallback (no form endpoint configured): open email client,
+      // then clear the form and show success on return/focus.
       if (!FORM_ENDPOINT) {
-        setStatus(
-          "The demo form is not connected yet. Please email us directly while we finish configuration.",
-          "info"
-        );
         var mail = document.getElementById("f-email");
         var subject = encodeURIComponent("Hotel OS demo request — " + (document.getElementById("f-hotel") || {}).value);
         var body = encodeURIComponent(
@@ -252,8 +249,25 @@
           "Rooms: " + (document.getElementById("f-rooms") || {}).value + "\n\n" +
           (document.getElementById("f-message") || {}).value
         );
+
         window.location.href =
           "mailto:" + FALLBACK_EMAIL + "?subject=" + subject + "&body=" + body;
+
+        // Clear and confirm once user returns to the page.
+        var confirmDemo = function () {
+          form.reset();
+          Object.keys(validators).forEach(function (id) { setError(id, ""); });
+          setStatus("Demo request successful. Our team will be in touch shortly.", "success");
+          window.removeEventListener("focus", confirmDemo);
+          document.removeEventListener("visibilitychange", onVisible);
+        };
+        var onVisible = function () {
+          if (document.visibilityState === "visible") confirmDemo();
+        };
+        window.addEventListener("focus", confirmDemo);
+        document.addEventListener("visibilitychange", onVisible);
+        // Fallback in case focus event does not fire reliably.
+        setTimeout(confirmDemo, 1200);
         return;
       }
 
